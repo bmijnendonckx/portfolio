@@ -1,8 +1,8 @@
 import React from 'react'
 import { Navbar, Nav } from 'react-bootstrap/lib'
 
-const Navigation = () => {
-    return <Navbar expand="md" fixed="top">
+const Navigation = ({isTop}) => {
+    return <Navbar expand="md" fixed="top" style={{ backgroundColor: isTop ? "inherit" : "#008E9E" }}>
         <Navbar.Toggle className="ml-auto" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">

@@ -3,7 +3,7 @@ import { Container, Row } from 'react-bootstrap'
 
 const styles = {
     height: "100vh",
-    padding: "64px 0"
+    padding: "4rem 0"
 }
 
 const Panel = (props) => {
