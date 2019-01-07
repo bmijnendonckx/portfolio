@@ -6,10 +6,15 @@ import './App.css'
 //images
 import me from './me.svg'
 import image from './img/me.jpg'
+import citygame from './img/city-game.png'
+import unogame from './img/uno-game.png'
+import mobilegame from './img/mobile-game.png'
+import comicdesign from './img/comic-design.jpg'
 //components
 import Panel from './components/Panel'
 import Navigation from './components/Navigation'
 import Progress from './components/Progress'
+import Portfolio from './components/Portfolio'
 
 
 class App extends Component {
@@ -41,7 +46,7 @@ class App extends Component {
           <object data={me} aria-label="me" id="svg" style={{position: "absolute", bottom: "0", right: "0", width: "50%"}}/>
         </Panel>
         <Panel colorFlag="2" title="About Me">
-          <div className="col-xl-8 col-sm-12" style={{color: "white"}}>
+          <div className="col-xl-8 col-sm-12">
             <p>Hi there!</p>
             <p>My name is <strong>Billy Mijnendonckx</strong>, former student and tech enthusiast. For the past years I've went through a lot of change, both personally as professionally. I've completed 1.5 years of Multimedia Technology (Virtual 3D), at Karel de Grote Hogeschool in Antwerp, with my mind set on becoming a Game Programmer. In the 2nd year of that course however, due to a task I was given to write an essay about any self-chosen topic (I chose Modular Game Design). I decided to pursue Art in the Game Industry.</p>
             <p>In the middle of my 2nd year I went to register for the course Game Graphics Design at Howest in Kortrijk. The year took off with a great start but at the first milestone (test exams, qweek) my mental state and personal issues were conflicting with my studies. I sat through the entire year trying to get back on track but I didn't get there in time. At the end of the year I was ready to start over with the right mind.</p>
@@ -70,8 +75,15 @@ class App extends Component {
             <Progress title="jquery" progress="2" />
           </div>
         </Panel>
-        <Panel colorFlag="2" title="Portfolio"></Panel>
+        <Panel colorFlag="2" title="Portfolio">
+          <Portfolio title="City builder" img={citygame}>An entry into C# and Unity Project where we got to make our own game.</Portfolio>
+          <Portfolio title="Uno" img={unogame}>A card game made with the MVC model and the usage of Git.</Portfolio>
+          <Portfolio title="Ontdek Antwerpen" img={mobilegame}>A mobile game inspired on Pokemon Go for students who consider studying in Antwerp.</Portfolio>
+          <Portfolio title="Comic Site" img={comicdesign}>A design for a comic site based on Usability theory.</Portfolio>
+          
+        </Panel>
         <Panel colorFlag="1" title="Contact"></Panel>
+        <Panel colorFlag="2">Footer</Panel>
       </div>
     );
   }

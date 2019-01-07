@@ -11,7 +11,7 @@ const Panel = (props) => {
         }
     }
 
-    return <section style={{height: props.height === "landing" ? "100vh" : "auto", padding: "4rem 0", backgroundColor: props.colorFlag === "1" ? "#343434" : "#444444"}}>
+    return <section style={{color: "white", height: props.height === "landing" ? "100vh" : "auto", padding: "4rem 0", backgroundColor: props.colorFlag === "1" ? "#343434" : "#444444"}}>
         <Container style={{height: "100%"}}>
             {title(props)}
             <Row style={{height: props.height === "landing" ? "100%" : "auto"}}>
