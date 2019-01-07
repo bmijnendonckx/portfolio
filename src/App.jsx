@@ -31,11 +31,11 @@ class App extends Component {
       <div className="App">
         <Navigation isTop={this.state.isNavTop}/>
         <Panel colorFlag="1" height="landing">
-          <div className="d-flex align-items-center" style={{color: "white"}}>
-            <div>
+          <div className="d-flex flex-column justify-content-center" style={{color: "white"}}>
+
               <h1 style={{fontSize: "6rem", marginBottom: "1rem", marginLeft: "-1%"}}>Billy</h1>
               <h6 style={{fontSize: "2rem", fontWeight: "300"}}><span style={{color: "#34A2AE"}}>Junior</span> Front End Developer</h6>
-            </div>
+
             
           </div>
           <object data={me} aria-label="me" id="svg" style={{position: "absolute", bottom: "0", right: "0", width: "50%"}}/>
