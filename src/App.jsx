@@ -9,6 +9,7 @@ import image from './img/me.jpg'
 //components
 import Panel from './components/Panel'
 import Navigation from './components/Navigation'
+import Progress from './components/Progress'
 
 
 class App extends Component {
@@ -29,7 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navigation isTop={this.state.isNavTop}/>
-        <Panel colorFlag="1">
+        <Panel colorFlag="1" height="landing">
           <div className="d-flex align-items-center" style={{color: "white"}}>
             <div>
               <h1 style={{fontSize: "6rem", marginBottom: "1rem", marginLeft: "-1%"}}>Billy</h1>
@@ -51,10 +52,26 @@ class App extends Component {
             <img src={image} alt="me" style={{width: "100%"}}/>
           </div>
         </Panel>
-        <Panel colorFlag="1" title="Skills"></Panel>
+        <Panel colorFlag="1" title="Skills" style={{height: "auto"}}>
+          <div className="col-lg">
+            <Progress title="html5" progress="3" />
+            <Progress title="css" progress="3" />
+            <Progress title="js" progress="3" />
+            <Progress title="c#" progress="2" />
+            <Progress title="java" progress="2" />
+            <Progress title="lua" progress="3" />
+            <Progress title="sass/scss" progress="3" />
+            <Progress title="bootstrap" progress="3" />
+          </div>
+          <div className="col-lg">
+            <Progress title="photoshop" progress="3" />
+            <Progress title="illustrator" progress="2" />
+            <Progress title="git" progress="2" />
+            <Progress title="jquery" progress="2" />
+          </div>
+        </Panel>
         <Panel colorFlag="2" title="Portfolio"></Panel>
         <Panel colorFlag="1" title="Contact"></Panel>
-        <Panel colorFlag="2"></Panel>
       </div>
     );
   }

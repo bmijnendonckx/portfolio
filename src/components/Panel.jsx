@@ -1,11 +1,6 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 
-const styles = {
-    height: "100vh",
-    padding: "4rem 0"
-}
-
 const Panel = (props) => {
     function title (props) {
         if (props.title) {
@@ -16,10 +11,10 @@ const Panel = (props) => {
         }
     }
 
-    return <section style={{...styles, backgroundColor: props.colorFlag === "1" ? "#343434" : "#444444"}}>
+    return <section style={{height: props.height === "landing" ? "100vh" : "auto", padding: "4rem 0", backgroundColor: props.colorFlag === "1" ? "#343434" : "#444444"}}>
         <Container style={{height: "100%"}}>
             {title(props)}
-            <Row style={{height: "100%"}}>
+            <Row style={{height: props.height === "landing" ? "100%" : "auto"}}>
                 {props.children}
             </Row>
         </Container>
