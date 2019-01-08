@@ -16,7 +16,7 @@ import Navigation from './components/Navigation'
 import Progress from './components/Progress'
 import Portfolio from './components/Portfolio'
 
-import { Col } from 'react-bootstrap'
+import { Row, Col, Form, Button } from 'react-bootstrap/lib'
 
 class App extends Component {
   state = {
@@ -164,9 +164,41 @@ class App extends Component {
           </Col>
         </Panel>
         <Panel colorFlag="2" title="Portfolio">
-          { portfolio.map( item => <Portfolio title={item.title} img={item.img}>{item.text}</Portfolio> ) }     
+          { portfolio.map( item => <Portfolio key={item.id} title={item.title} img={item.img}>{item.text}</Portfolio> ) }     
         </Panel>
-        <Panel colorFlag="1" title="Contact"></Panel>
+        <Panel colorFlag="1" title="Contact">
+          <Col md={12}>
+            <Form>
+              <Row>
+                <Col>
+                  <Form.Group controlId="formName">
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control type="text" placeholder="Name" />
+                  </Form.Group>
+
+                  <Form.Group controlId="formEmail">
+                    <Form.Label>Email address</Form.Label>
+                    <Form.Control type="email" placeholder="Email" />
+                  </Form.Group>
+                </Col>
+                <Col>
+                  <Form.Group controlId="formText">
+                    <Form.Label>Message</Form.Label>
+                    <Form.Control as="textarea" placeholder="Message" rows="7" />
+                  </Form.Group>
+                </Col>
+              </Row>
+              <Row>
+                <Col md={6}>
+                  <Button style={{backgroundColor: "#3EABB8", border: "none", marginTop: "-6rem", width: "100%"}} type="submit">
+                    Submit
+                  </Button>
+                </Col>
+              </Row>
+
+            </Form>
+          </Col>
+        </Panel>
         <Panel colorFlag="2">Footer</Panel>
       </div>
     );
