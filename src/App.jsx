@@ -156,7 +156,7 @@ class App extends Component {
             <img src={image} alt="me" style={{width: "100%"}}/>
           </Col>
         </Panel>
-        <Panel colorFlag="1" title="Skills" style={{height: "auto"}}>
+        <Panel colorFlag="1" title="Skills">
           <Col lg="6">
             { skills1.map( skill => <Progress key={skill.id} title={skill.title} progress={skill.progress} /> ) }
           </Col>
