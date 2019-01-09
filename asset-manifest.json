@@ -1,7 +1,7 @@
 {
-  "main.css": "/portfolio/static/css/main.f05b9dfa.chunk.css",
-  "main.js": "/portfolio/static/js/main.b4d94a46.chunk.js",
-  "main.js.map": "/portfolio/static/js/main.b4d94a46.chunk.js.map",
+  "main.css": "/portfolio/static/css/main.6d13c614.chunk.css",
+  "main.js": "/portfolio/static/js/main.dd4d58f0.chunk.js",
+  "main.js.map": "/portfolio/static/js/main.dd4d58f0.chunk.js.map",
   "static/css/1.82b5d9b9.chunk.css": "/portfolio/static/css/1.82b5d9b9.chunk.css",
   "static/js/1.0f9d8324.chunk.js": "/portfolio/static/js/1.0f9d8324.chunk.js",
   "static/js/1.0f9d8324.chunk.js.map": "/portfolio/static/js/1.0f9d8324.chunk.js.map",
@@ -14,8 +14,8 @@
   "static/media/comic-design.jpg": "/portfolio/static/media/comic-design.42d3ee32.jpg",
   "static/media/me.jpg": "/portfolio/static/media/me.f08b1d83.jpg",
   "static/css/1.82b5d9b9.chunk.css.map": "/portfolio/static/css/1.82b5d9b9.chunk.css.map",
-  "static/css/main.f05b9dfa.chunk.css.map": "/portfolio/static/css/main.f05b9dfa.chunk.css.map",
+  "static/css/main.6d13c614.chunk.css.map": "/portfolio/static/css/main.6d13c614.chunk.css.map",
   "index.html": "/portfolio/index.html",
-  "precache-manifest.6e1c099a4d407d755853a7172f80a76b.js": "/portfolio/precache-manifest.6e1c099a4d407d755853a7172f80a76b.js",
+  "precache-manifest.1a7aeab543f043880c3bfea7019be609.js": "/portfolio/precache-manifest.1a7aeab543f043880c3bfea7019be609.js",
   "service-worker.js": "/portfolio/service-worker.js"
 }
