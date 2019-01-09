@@ -13,7 +13,7 @@ class Portfolio extends Component {
     }
 
     render() {
-        return <Col md={3} xs={12} className="mb-3 pt-3" >
+        return <Col lg={3} md={6} xs={12} className="mb-3 pt-3" >
             <Card onClick = {this.openPortfolio}>
                 <Card.Img variant="top" src={this.props.img} style={{backgroundColor: "black"}} />
                 <Card.Body>

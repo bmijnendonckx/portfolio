@@ -10,14 +10,33 @@ html {
     /*background-color: #008E9E;*/
 }
 
-.navbar-light .navbar-nav .nav-link {
+.navbar-dark .navbar-nav .nav-link {
     font-size: 1.1rem;
-    color: white;
+    color: #efefef;
 }
 
-.navbar-light .navbar-nav .nav-link.active {
-    color: white;
-    /*color: #46DAEA;*/
+.navbar-collapse {
+    text-align: center;
+    margin-top: .5rem;
+    padding: .5rem 0 1rem 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.navbar-collapse .nav-item:hover {
+    background-color: rgba(0, 0, 0, .2);
+}
+
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-collapse {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+    .navbar-collapse .nav-item:hover {
+        background: none;
+    }
 }
 
 .progress-component:hover {
