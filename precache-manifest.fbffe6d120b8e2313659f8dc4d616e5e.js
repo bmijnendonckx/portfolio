@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/me.f08b1d83.jpg"
   },
   {
-    "revision": "782bc4e76b7c0738592a",
-    "url": "/portfolio/static/css/main.028f89a3.chunk.css"
+    "revision": "be0eb48cfa1f92a14573",
+    "url": "/portfolio/static/css/main.855a52df.chunk.css"
   },
   {
     "revision": "42d3ee32261980370b85cc54084e93ec",
     "url": "/portfolio/static/media/comic-design.42d3ee32.jpg"
   },
   {
-    "revision": "0f9d83241b2e4abad163",
-    "url": "/portfolio/static/js/1.0f9d8324.chunk.js"
+    "revision": "37ea760974981d04d09c",
+    "url": "/portfolio/static/js/1.37ea7609.chunk.js"
   },
   {
     "revision": "ee2a100325fd284f0097",
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/me.9f612d44.svg"
   },
   {
-    "revision": "782bc4e76b7c0738592a",
-    "url": "/portfolio/static/js/main.782bc4e7.chunk.js"
+    "revision": "be0eb48cfa1f92a14573",
+    "url": "/portfolio/static/js/main.be0eb48c.chunk.js"
   },
   {
     "revision": "c9ecdb8a7d8abd85d31be0456cb357d2",
@@ -40,11 +40,11 @@ self.__precacheManifest = [
     "url": "/portfolio/static/media/mobile-game.f44aa2bc.png"
   },
   {
-    "revision": "0f9d83241b2e4abad163",
-    "url": "/portfolio/static/css/1.82b5d9b9.chunk.css"
+    "revision": "37ea760974981d04d09c",
+    "url": "/portfolio/static/css/1.20c52f17.chunk.css"
   },
   {
-    "revision": "d39e4801399a93c4b84b99fdf25bc529",
+    "revision": "9c16523ca9fce935213d13e6c7117290",
     "url": "/portfolio/index.html"
   }
 ];
