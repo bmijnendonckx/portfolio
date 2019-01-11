@@ -144,7 +144,7 @@ class App extends Component {
           </div>
           <object data={me} aria-label="me" id="svg" style={{position: "absolute", bottom: "0", right: "0", width: "50%"}}/>
         </Panel>
-        <Panel colorFlag="2" title="About Me">
+        <Panel colorFlag="2" title="About Me" id="about">
           <Col sm={12} lg={8}>
             <AboutMe/>
           </Col>
@@ -152,7 +152,7 @@ class App extends Component {
             <img src={image} alt="me" style={{width: "100%"}}/>
           </Col>
         </Panel>
-        <Panel colorFlag="1" title="Skills">
+        <Panel colorFlag="1" title="Skills" id="skills">
           <Col lg="6">
             { skills1.map( skill => <Progress key={skill.id} title={skill.title} progress={skill.progress} /> ) }
           </Col>
@@ -160,10 +160,10 @@ class App extends Component {
             { skills2.map( skill => <Progress key={skill.id} title={skill.title} progress={skill.progress} /> ) }
           </Col>
         </Panel>
-        <Panel colorFlag="2" title="Portfolio">
+        <Panel colorFlag="2" title="Portfolio" id="portfolio">
           { portfolio.map( item => <Portfolio key={item.id} title={item.title} img={item.img}>{item.text}</Portfolio> ) }     
         </Panel>
-        <Panel colorFlag="1" title="Contact">
+        <Panel colorFlag="1" title="Contact" id="contact">
           <Col xs={12}>
             <Form>
               <Row>
