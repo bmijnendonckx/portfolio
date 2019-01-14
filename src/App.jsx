@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactGA from 'react-ga';
 //default styling
 import 'normalize.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -19,8 +20,10 @@ import Navigation from './components/Navigation'
 import AboutMe from './components/AboutMe'
 import Progress from './components/Progress'
 import Portfolio from './components/Portfolio'
-
 import { Row, Col, Form, Button } from 'react-bootstrap/lib'
+
+ReactGA.initialize('UA-132431190-1')
+ReactGA.pageview(window.location.pathname + window.location.search)
 
 class App extends Component {
   state = {
