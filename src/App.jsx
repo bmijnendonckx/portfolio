@@ -22,9 +22,6 @@ import Progress from './components/Progress'
 import Portfolio from './components/Portfolio'
 import { Row, Col, Form, Button } from 'react-bootstrap/lib'
 
-ReactGA.initialize('UA-132431190-1')
-ReactGA.pageview(window.location.pathname + window.location.search)
-
 class App extends Component {
   state = {
       isNavTop: true,
@@ -124,6 +121,9 @@ class App extends Component {
   }
 
   componentDidMount() {
+    ReactGA.initialize('UA-132431190-1')
+    ReactGA.pageview(window.location.pathname + window.location.search)
+
     document.addEventListener('scroll', () => {
       const isNavTop = window.scrollY < 100;
       if (isNavTop !== this.state.isNavTop) {
