@@ -122,7 +122,7 @@ class App extends Component {
 
   componentDidMount() {
     ReactGA.initialize('UA-132431190-1')
-    ReactGA.pageview(window.location.pathname + window.location.search)
+    ReactGA.pageview('/portfolio')
 
     document.addEventListener('scroll', () => {
       const isNavTop = window.scrollY < 100;
