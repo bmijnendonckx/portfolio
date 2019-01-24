@@ -44,8 +44,39 @@ html {
     cursor: pointer;
 }
 
+.btn-primary {
+    background-color: #3EABB8;
+    border: "none";
+}
+
+.btn-primary:hover {
+    background-color: #008E9E;
+}
+
+.modal-content {
+    background-color: #343434;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: #666;
+}
+
+.modal-body,
+.modal-content .close {
+    color: white;
+}
+
+.modal-title {
+    color: rgb(62, 171, 184);
+}
+
 .card:hover {
     background-color: #343434;
+}
+
+.carousel-indicators {
+    margin-bottom: 0;
 }
 
 #footerLinks a {

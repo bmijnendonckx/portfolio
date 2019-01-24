@@ -20,7 +20,7 @@ import Navigation from './components/Navigation'
 import AboutMe from './components/AboutMe'
 import Progress from './components/Progress'
 import Portfolio from './components/Portfolio'
-import { Container, Row, Col, Form, Button, Modal } from 'react-bootstrap/lib'
+import { Container, Row, Col, Form, Button, Modal, Carousel } from 'react-bootstrap/lib'
 
 class App extends Component {
   state = {
@@ -192,10 +192,18 @@ class App extends Component {
             <Modal.Body>
               <Container>
                 <Row>
-                  <Col md={4}>
-                    <img src={this.state.portfolio[this.state.currentModal].img} alt={this.state.portfolio[this.state.currentModal].title} style={{width: "100%"}}/>
+                  <Col md={6}>
+                    <Carousel>
+                      <Carousel.Item>
+                        <img src={this.state.portfolio[this.state.currentModal].img} alt={this.state.portfolio[this.state.currentModal].title} style={{width: "100%"}}/>
+                      </Carousel.Item>
+                      <Carousel.Item>
+                        <img src={this.state.portfolio[this.state.currentModal].img} alt={this.state.portfolio[this.state.currentModal].title} style={{width: "100%"}}/>
+                      </Carousel.Item>
+                    </Carousel>
+                    
                   </Col>
-                  <Col md={8}>
+                  <Col md={6}>
                     {this.state.portfolio[this.state.currentModal].text}
                   </Col>
                 </Row>
@@ -231,7 +239,7 @@ class App extends Component {
               </Row>
               <Row>
                 <Col sm={12} md={6}>
-                  <Button style={{backgroundColor: "#3EABB8", border: "none", marginTop: "-6rem", width: "100%"}} type="submit">
+                  <Button style={{marginTop: "-6rem", width: "100%"}} type="submit">
                     Submit
                   </Button>
                 </Col>
