@@ -20,104 +20,110 @@ import Navigation from './components/Navigation'
 import AboutMe from './components/AboutMe'
 import Progress from './components/Progress'
 import Portfolio from './components/Portfolio'
-import { Row, Col, Form, Button } from 'react-bootstrap/lib'
+import { Container, Row, Col, Form, Button, Modal } from 'react-bootstrap/lib'
 
 class App extends Component {
   state = {
-      isNavTop: true,
-      skills: [
-        {
-          id: 0,
-          title: "html5",
-          progress: "3"
-        },
-        {
-          id: 1,
-          title: "css",
-          progress: "3"
-        },
-        {
-          id: 2,
-          title: "js",
-          progress: "3"
-        },
-        {
-          id: 3,
-          title: "c#",
-          progress: "2"
-        },
-        {
-          id: 4,
-          title: "java",
-          progress: "2"
-        },
-        {
-          id: 5,
-          title: "lua",
-          progress: "3"
-        },
-        {
-          id: 6,
-          title: "sass/scss",
-          progress: "3"
-        },
-        {
-          id: 7,
-          title: "bootstrap",
-          progress: "3"
-        },
-        {
-          id: 8,
-          title: "photoshop",
-          progress: "3"
-        },
-        {
-          id: 9,
-          title: "illustrator",
-          progress: "2"
-        },
-        {
-          id: 10,
-          title: "git",
-          progress: "2"
-        },
-        {
-          id: 11,
-          title: "jquery",
-          progress: "3"
-        },
-        {
-          id: 12,
-          title: "react",
-          progress: "2"
-        }
-      ],
-      portfolio: [
-        {
-          id: "0",
-          title: "City builder",
-          img: citygame,
-          text: "An entry into C# and Unity Project where we got to make our own game."
-        },
-        {
-          id: "1",
-          title: "Uno",
-          img: unogame,
-          text: "A card game made with the MVC model and the usage of Git."
-        },
-        {
-          id: "2",
-          title: "Ontdek Antwerpen",
-          img: mobilegame,
-          text: "A mobile game inspired on Pokemon Go for students who consider studying in Antwerp."
-        },
-        {
-          id: "3",
-          title: "Comic Site",
-          img: comicdesign,
-          text: "A design for a comic site based on Usability theory."
-        }
-      ]
+    isNavTop: true,
+    skills: [
+      {
+        id: 0,
+        title: "html5",
+        progress: "3"
+      },
+      {
+        id: 1,
+        title: "css",
+        progress: "3"
+      },
+      {
+        id: 2,
+        title: "js",
+        progress: "3"
+      },
+      {
+        id: 3,
+        title: "c#",
+        progress: "2"
+      },
+      {
+        id: 4,
+        title: "java",
+        progress: "2"
+      },
+      {
+        id: 5,
+        title: "lua",
+        progress: "3"
+      },
+      {
+        id: 6,
+        title: "sass/scss",
+        progress: "3"
+      },
+      {
+        id: 7,
+        title: "bootstrap",
+        progress: "3"
+      },
+      {
+        id: 8,
+        title: "photoshop",
+        progress: "3"
+      },
+      {
+        id: 9,
+        title: "illustrator",
+        progress: "2"
+      },
+      {
+        id: 10,
+        title: "git",
+        progress: "2"
+      },
+      {
+        id: 11,
+        title: "jquery",
+        progress: "3"
+      },
+      {
+        id: 12,
+        title: "react",
+        progress: "2"
+      }
+    ],
+    portfolio: [
+      {
+        id: "0",
+        title: "City builder",
+        img: citygame,
+        description: "An entry into C# and Unity Project where we got to make our own game.",
+        text: ""
+      },
+      {
+        id: "1",
+        title: "Uno",
+        img: unogame,
+        description: "A card game made with the MVC model and the usage of Git.",
+        text: ""
+      },
+      {
+        id: "2",
+        title: "Ontdek Antwerpen",
+        img: mobilegame,
+        description: "A mobile game inspired on Pokemon Go for students who consider studying in Antwerp.",
+        text: ""
+      },
+      {
+        id: "3",
+        title: "Comic Site",
+        img: comicdesign,
+        description: "A design for a comic site based on Usability theory.",
+        text: ""
+      }
+    ],
+    isModalOpen: false,
+    currentModal: 0
   }
 
   componentDidMount() {
@@ -130,6 +136,19 @@ class App extends Component {
           this.setState({ isNavTop })
       }
     });
+  }
+
+  openModal = (id) => {
+    this.setState({
+      isModalOpen: true,
+      currentModal: id
+    })
+  }
+
+  closeModal = () => {
+    this.setState({
+      isModalOpen: false
+    })
   }
 
   render() {
@@ -164,7 +183,29 @@ class App extends Component {
           </Col>
         </Panel>
         <Panel colorFlag="2" title="Portfolio" id="portfolio">
-          { portfolio.map( item => <Portfolio key={item.id} title={item.title} img={item.img}>{item.text}</Portfolio> ) }     
+          <Modal show={this.state.isModalOpen} onHide={this.closeModal} size="lg" centered>
+            <Modal.Header closeButton>
+              <Modal.Title id="contained-modal-title-vcenter">
+                  {this.state.portfolio[this.state.currentModal].title}
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Container>
+                <Row>
+                  <Col md={4}>
+                    <img src={this.state.portfolio[this.state.currentModal].img} alt={this.state.portfolio[this.state.currentModal].title} style={{width: "100%"}}/>
+                  </Col>
+                  <Col md={8}>
+                    {this.state.portfolio[this.state.currentModal].text}
+                  </Col>
+                </Row>
+              </Container>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button onClick={this.closeModal}>Close</Button>
+            </Modal.Footer>
+          </Modal>
+          { portfolio.map( item => <Portfolio key={item.id} portfolioId={item.id} title={item.title} img={item.img} openModal={this.openModal}>{item.description}</Portfolio> ) }     
         </Panel>
         <Panel colorFlag="1" title="Contact" id="contact">
           <Col xs={12}>
