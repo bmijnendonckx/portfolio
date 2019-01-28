@@ -7,6 +7,7 @@ import './App.css'
 //FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
 //images
 import me from './me.svg'
 import image from './img/me.jpg'
@@ -181,6 +182,7 @@ class App extends Component {
           <Col lg="6">
             { skills2.map( skill => <Progress key={skill.id} title={skill.title} progress={skill.progress} /> ) }
           </Col>
+          <Button variant="primary" id="btn-cv"><a href="./pdf/cv.pdf"><FontAwesomeIcon icon={faFilePdf}/> curriculum vitae</a></Button>
         </Panel>
         <Panel colorFlag="2" title="Portfolio" id="portfolio">
           <Modal show={this.state.isModalOpen} onHide={this.closeModal} size="lg" centered>
