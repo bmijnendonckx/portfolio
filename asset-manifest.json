@@ -1,7 +1,7 @@
 {
   "main.css": "/portfolio/static/css/main.3580e1a1.chunk.css",
-  "main.js": "/portfolio/static/js/main.da4a7c1f.chunk.js",
-  "main.js.map": "/portfolio/static/js/main.da4a7c1f.chunk.js.map",
+  "main.js": "/portfolio/static/js/main.3a972f00.chunk.js",
+  "main.js.map": "/portfolio/static/js/main.3a972f00.chunk.js.map",
   "static/css/1.ad7844f0.chunk.css": "/portfolio/static/css/1.ad7844f0.chunk.css",
   "static/js/1.b2f1f2f5.chunk.js": "/portfolio/static/js/1.b2f1f2f5.chunk.js",
   "static/js/1.b2f1f2f5.chunk.js.map": "/portfolio/static/js/1.b2f1f2f5.chunk.js.map",
@@ -13,9 +13,9 @@
   "static/media/mobile-game.png": "/portfolio/static/media/mobile-game.f44aa2bc.png",
   "static/media/comic-design.jpg": "/portfolio/static/media/comic-design.42d3ee32.jpg",
   "static/media/me.jpg": "/portfolio/static/media/me.f08b1d83.jpg",
-  "static/css/main.3580e1a1.chunk.css.map": "/portfolio/static/css/main.3580e1a1.chunk.css.map",
   "static/css/1.ad7844f0.chunk.css.map": "/portfolio/static/css/1.ad7844f0.chunk.css.map",
+  "static/css/main.3580e1a1.chunk.css.map": "/portfolio/static/css/main.3580e1a1.chunk.css.map",
   "index.html": "/portfolio/index.html",
-  "precache-manifest.e518b7b793b01baca59f6a4ea8718709.js": "/portfolio/precache-manifest.e518b7b793b01baca59f6a4ea8718709.js",
+  "precache-manifest.23f40c702f518bdea898cae5ecf41584.js": "/portfolio/precache-manifest.23f40c702f518bdea898cae5ecf41584.js",
   "service-worker.js": "/portfolio/service-worker.js"
 }
