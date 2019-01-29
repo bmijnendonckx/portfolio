@@ -4,6 +4,7 @@ Adobe Illustrator
   
 [Create React App](https://github.com/facebook/create-react-app)  
 [React-bootstrap](https://github.com/react-bootstrap/react-bootstrap)  
-  
+[Firestore/Firebase](https://cloud.google.com/firestore/)  
+
 Mockup:
 ![mockup](https://raw.githubusercontent.com/bmijnendonckx/portfolio/master/readme-files/mockup.png)
