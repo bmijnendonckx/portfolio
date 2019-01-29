@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga'
+//Firestore
+import firebase from './components/Firestore'
 //default styling
 import 'normalize.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -8,13 +10,8 @@ import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
-//images
+//svg
 import me from './me.svg'
-import image from './img/me.jpg'
-import citygame from './img/city-game.png'
-import unogame from './img/uno-game.png'
-import mobilegame from './img/mobile-game.png'
-import comicdesign from './img/comic-design.jpg'
 //components
 import Panel from './components/Panel'
 import Navigation from './components/Navigation'
@@ -24,119 +21,119 @@ import Portfolio from './components/Portfolio'
 import { Container, Row, Col, Form, Button, Modal, Carousel } from 'react-bootstrap/lib'
 
 class App extends Component {
-  state = {
-    isNavTop: true,
-    skills: [
-      {
-        id: 0,
-        title: "html5",
-        progress: "3"
-      },
-      {
-        id: 1,
-        title: "css",
-        progress: "3"
-      },
-      {
-        id: 2,
-        title: "js",
-        progress: "3"
-      },
-      {
-        id: 3,
-        title: "c#",
-        progress: "2"
-      },
-      {
-        id: 4,
-        title: "java",
-        progress: "2"
-      },
-      {
-        id: 5,
-        title: "lua",
-        progress: "3"
-      },
-      {
-        id: 6,
-        title: "sass/scss",
-        progress: "3"
-      },
-      {
-        id: 7,
-        title: "bootstrap",
-        progress: "3"
-      },
-      {
-        id: 8,
-        title: "photoshop",
-        progress: "3"
-      },
-      {
-        id: 9,
-        title: "illustrator",
-        progress: "2"
-      },
-      {
-        id: 10,
-        title: "git",
-        progress: "2"
-      },
-      {
-        id: 11,
-        title: "jquery",
-        progress: "3"
-      },
-      {
-        id: 12,
-        title: "react",
-        progress: "2"
-      }
-    ],
-    portfolio: [
-      {
-        id: "0",
-        title: "City builder",
-        img: citygame,
-        description: "An entry into C# and Unity Project where we got to make our own game.",
-        text: ""
-      },
-      {
-        id: "1",
-        title: "Uno",
-        img: unogame,
-        description: "A card game made with the MVC model and the usage of Git.",
-        text: ""
-      },
-      {
-        id: "2",
-        title: "Ontdek Antwerpen",
-        img: mobilegame,
-        description: "A mobile game inspired on Pokemon Go for students who consider studying in Antwerp.",
-        text: ""
-      },
-      {
-        id: "3",
-        title: "Comic Site",
-        img: comicdesign,
-        description: "A design for a comic site based on Usability theory.",
-        text: ""
-      }
-    ],
-    isModalOpen: false,
-    currentModal: 0
+  constructor() {
+    super()
+
+    this.state = {
+      isNavTop: true,
+      skills: [
+        {
+          id: 0,
+          title: "html5",
+          progress: "3"
+        },
+        {
+          id: 1,
+          title: "css",
+          progress: "3"
+        },
+        {
+          id: 2,
+          title: "js",
+          progress: "3"
+        },
+        {
+          id: 3,
+          title: "c#",
+          progress: "2"
+        },
+        {
+          id: 4,
+          title: "java",
+          progress: "2"
+        },
+        {
+          id: 5,
+          title: "lua",
+          progress: "3"
+        },
+        {
+          id: 6,
+          title: "sass/scss",
+          progress: "3"
+        },
+        {
+          id: 7,
+          title: "bootstrap",
+          progress: "3"
+        },
+        {
+          id: 8,
+          title: "photoshop",
+          progress: "3"
+        },
+        {
+          id: 9,
+          title: "illustrator",
+          progress: "2"
+        },
+        {
+          id: 10,
+          title: "git",
+          progress: "2"
+        },
+        {
+          id: 11,
+          title: "jquery",
+          progress: "3"
+        },
+        {
+          id: 12,
+          title: "react",
+          progress: "2"
+        }
+      ],
+      isModalOpen: false,
+      currentModal: 0,
+      portfolio: [
+        {
+          id: 0,
+          title: "Sample Text",
+          img: 'https://firebasestorage.googleapis.com/v0/b/portfolio-6fbde.appspot.com/o/city-game.png?alt=media&token=5713a58e-94e0-4c48-9d0f-fc516bd7d244',
+          description: "Lorem ipsum",
+          text: ""
+        }
+      ]
+    }    
   }
 
   componentDidMount() {
     ReactGA.initialize('UA-132431190-1')
     ReactGA.pageview('/portfolio')
 
+    firebase.firestore().collection("Portfolio").orderBy("id").get().then(
+      snap => {
+        const portfolio = []
+
+        snap.forEach(doc => {
+          portfolio.push(doc.data())
+        })
+
+        console.log(portfolio)
+
+        this.setState({
+          portfolio: portfolio
+        })
+      }
+    )
+
     document.addEventListener('scroll', () => {
       const isNavTop = window.scrollY < 100;
       if (isNavTop !== this.state.isNavTop) {
           this.setState({ isNavTop })
       }
-    });
+    })
+
   }
 
   openModal = (id) => {
@@ -172,23 +169,19 @@ class App extends Component {
             <AboutMe/>
           </Col>
           <Col lg={4} className="d-none d-lg-flex align-items-center">
-            <img src={image} alt="me" style={{width: "100%"}}/>
+            <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-6fbde.appspot.com/o/me.jpg?alt=media&token=85db9b5b-d8d8-4914-b546-bd767d3116bb" alt="me" style={{width: "100%"}}/>
           </Col>
         </Panel>
         <Panel colorFlag="1" title="Skills" id="skills">
-          <Col lg="6">
-            { skills1.map( skill => <Progress key={skill.id} title={skill.title} progress={skill.progress} /> ) }
-          </Col>
-          <Col lg="6">
-            { skills2.map( skill => <Progress key={skill.id} title={skill.title} progress={skill.progress} /> ) }
-          </Col>
-          <Button variant="primary" id="btn-cv"><a href="./pdf/cv.pdf"><FontAwesomeIcon icon={faFilePdf}/> curriculum vitae</a></Button>
+          <Col lg="6">{ skills1.map( skill => <Progress key={skill.id} title={skill.title} progress={skill.progress} /> ) }</Col>
+          <Col lg="6">{ skills2.map( skill => <Progress key={skill.id} title={skill.title} progress={skill.progress} /> ) }</Col>
+          <Button variant="primary" id="btn-cv"><a href="https://drive.google.com/file/d/1J_CaZqc3KGDYQR-oAwO8SE3vm75cf1pi/view?usp=sharing"><FontAwesomeIcon icon={faFilePdf}/> curriculum vitae</a></Button>
         </Panel>
         <Panel colorFlag="2" title="Portfolio" id="portfolio">
           <Modal show={this.state.isModalOpen} onHide={this.closeModal} size="lg" centered>
             <Modal.Header closeButton>
               <Modal.Title id="contained-modal-title-vcenter">
-                  {this.state.portfolio[this.state.currentModal].title}
+                  { this.state.portfolio[this.state.currentModal].title }
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -215,7 +208,7 @@ class App extends Component {
                 <Button onClick={this.closeModal}>Close</Button>
             </Modal.Footer>
           </Modal>
-          { portfolio.map( item => <Portfolio key={item.id} portfolioId={item.id} title={item.title} img={item.img} openModal={this.openModal}>{item.description}</Portfolio> ) }     
+          { portfolio.map( item => <Portfolio key={item.id} portfolioId={item.id} title={item.title} img={item.img} openModal={this.openModal}>{item.description}</Portfolio> ) }   
         </Panel>
         <Panel colorFlag="1" title="Contact" id="contact">
           <Col xs={12}>
