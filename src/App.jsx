@@ -99,7 +99,9 @@ class App extends Component {
         {
           id: 0,
           title: "Sample Text",
-          img: 'https://firebasestorage.googleapis.com/v0/b/portfolio-6fbde.appspot.com/o/city-game.png?alt=media&token=5713a58e-94e0-4c48-9d0f-fc516bd7d244',
+          img: [
+            'https://firebasestorage.googleapis.com/v0/b/portfolio-6fbde.appspot.com/o/city-game.png?alt=media&token=5713a58e-94e0-4c48-9d0f-fc516bd7d244'
+          ],
           description: "Lorem ipsum",
           text: ""
         }
@@ -119,7 +121,7 @@ class App extends Component {
           portfolio.push(doc.data())
         })
 
-        console.log(portfolio)
+        //console.log(portfolio)
 
         this.setState({
           portfolio: portfolio
@@ -148,6 +150,26 @@ class App extends Component {
       isModalOpen: false
     })
   }
+
+  renderPortfolio = (portfolio) => {
+    let content = []
+    const cols = portfolio.length < 4 ? portfolio.length : 4
+    const rows = Math.ceil(portfolio.length/4)
+
+    for(let row = 0; row < rows; row++) {
+      let children = []
+
+      for(let col = 0; col < cols; col++) {
+        const item = portfolio[(row*cols)+col]
+        children.push(<Portfolio key={item.id} portfolioId={item.id} title={item.title} img={item.img[0]} openModal={this.openModal}>{item.description}</Portfolio>)
+      }
+
+      content.push(<Row key={row}>{children}</Row>) 
+    }
+
+    return content
+  }
+  
 
   render() {
     const {skills, portfolio} = this.state;
@@ -189,12 +211,11 @@ class App extends Component {
                 <Row>
                   <Col md={6}>
                     <Carousel>
-                      <Carousel.Item>
-                        <img src={this.state.portfolio[this.state.currentModal].img} alt={this.state.portfolio[this.state.currentModal].title} style={{width: "100%"}}/>
-                      </Carousel.Item>
-                      <Carousel.Item>
-                        <img src={this.state.portfolio[this.state.currentModal].img} alt={this.state.portfolio[this.state.currentModal].title} style={{width: "100%"}}/>
-                      </Carousel.Item>
+                      { portfolio[this.state.currentModal].img.map((img, index) => 
+                        <Carousel.Item key={index}>
+                          <img src={img} alt={portfolio[this.state.currentModal].title} style={{width: "100%"}}/>
+                        </Carousel.Item>
+                      ) }
                     </Carousel>
                     
                   </Col>
@@ -208,7 +229,7 @@ class App extends Component {
                 <Button onClick={this.closeModal}>Close</Button>
             </Modal.Footer>
           </Modal>
-          { portfolio.map( item => <Portfolio key={item.id} portfolioId={item.id} title={item.title} img={item.img} openModal={this.openModal}>{item.description}</Portfolio> ) }   
+          { this.renderPortfolio(portfolio) }
         </Panel>
         <Panel colorFlag="1" title="Contact" id="contact">
           <Col xs={12}>
