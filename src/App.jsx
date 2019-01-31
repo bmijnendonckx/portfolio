@@ -30,67 +30,67 @@ class App extends Component {
         {
           id: 0,
           title: "html5",
-          progress: "3"
+          progress: 3
         },
         {
           id: 1,
           title: "css3",
-          progress: "3"
+          progress: 3
         },
         {
           id: 2,
           title: "js/es6",
-          progress: "3"
+          progress: 3
         },
         {
           id: 3,
           title: "c#",
-          progress: "2"
+          progress: 2
         },
         {
           id: 4,
           title: "java",
-          progress: "2"
+          progress: 2
         },
         {
           id: 5,
           title: "lua",
-          progress: "3"
+          progress: 3
         },
         {
           id: 6,
           title: "sass/scss",
-          progress: "3"
+          progress: 3
         },
         {
           id: 7,
           title: "bootstrap",
-          progress: "3"
+          progress: 3
         },
         {
           id: 8,
           title: "photoshop",
-          progress: "3"
+          progress: 3
         },
         {
           id: 9,
           title: "illustrator",
-          progress: "2"
+          progress: 2
         },
         {
           id: 10,
           title: "git",
-          progress: "2"
+          progress: 2
         },
         {
           id: 11,
           title: "jquery",
-          progress: "3"
+          progress: 3
         },
         {
           id: 12,
           title: "react",
-          progress: "2"
+          progress: 2
         }
       ],
       isModalOpen: false,
