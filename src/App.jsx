@@ -34,12 +34,12 @@ class App extends Component {
         },
         {
           id: 1,
-          title: "css",
+          title: "css3",
           progress: "3"
         },
         {
           id: 2,
-          title: "js",
+          title: "js/es6",
           progress: "3"
         },
         {
