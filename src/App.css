@@ -96,6 +96,17 @@ html {
     margin-bottom: 0;
 }
 
+.contact {
+    font-size: 1.5rem;
+    color: inherit;
+    font-weight: 700;
+}
+
+.contact a,
+.contact span {
+    color: rgb(62, 171, 184);
+}
+
 #footerLinks a {
     display:inline-block;
     width:100%;

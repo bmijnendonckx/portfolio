@@ -18,7 +18,7 @@ import Navigation from './components/Navigation'
 import AboutMe from './components/AboutMe'
 import Progress from './components/Progress'
 import Portfolio from './components/Portfolio'
-import { Container, Row, Col, Form, Button, Modal, Carousel } from 'react-bootstrap/lib'
+import { Container, Row, Col, Button, Modal, Carousel } from 'react-bootstrap/lib'
 
 class App extends Component {
   constructor() {
@@ -232,36 +232,9 @@ class App extends Component {
           { this.renderPortfolio(portfolio) }
         </Panel>
         <Panel colorFlag="1" title="Contact" id="contact">
-          <Col xs={12}>
-            <Form>
-              <Row>
-                <Col md={6} xs={{span: 12}}>
-                  <Form.Group controlId="formName">
-                    <Form.Label>Name</Form.Label>
-                    <Form.Control type="text" placeholder="Name" />
-                  </Form.Group>
-
-                  <Form.Group controlId="formEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Email" />
-                  </Form.Group>
-                </Col>
-                <Col md={6} xs={12}>
-                  <Form.Group controlId="formText">
-                    <Form.Label>Message</Form.Label>
-                    <Form.Control as="textarea" placeholder="Message" rows="7" />
-                  </Form.Group>
-                </Col>
-              </Row>
-              <Row>
-                <Col sm={12} md={6}>
-                  <Button style={{marginTop: "-6rem", width: "100%"}} type="submit">
-                    Submit
-                  </Button>
-                </Col>
-              </Row>
-
-            </Form>
+          <Col className="text-center mt-5 mb-3">
+            <p className="contact">feel free to mail me @ <a href="mailto:bmijnendonckx@gmail.com">bmijnendonckx@gmail.com</a></p>
+            <p className="contact">or give me a call <span>+324 84 95 70 35</span></p>
           </Col>
         </Panel>
         <Panel colorFlag="2">
