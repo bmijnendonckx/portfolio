@@ -10,7 +10,7 @@ const Panel = (props) => {
             </React.Fragment>
     }
 
-    return <section id={props.id} style={{color: "white", height: props.height === "landing" ? "100vh" : "auto", padding: "4rem 0", backgroundColor: props.colorFlag === "1" ? "#343434" : "#444444"}}>
+    return <section id={props.id} className={props.className + " panel"} style={{height: props.height === "landing" ? "100vh" : "auto", backgroundColor: props.colorFlag === "1" ? "#343434" : "#444444"}}>
         <Container style={{height: "100%"}}>
             {title(props)}
             <Row style={{height: props.height === "landing" ? "100%" : "auto"}}>

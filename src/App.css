@@ -102,9 +102,20 @@ html {
     font-weight: 700;
 }
 
+#footerLinks a, 
+#footerLinks svg,
 .contact a,
 .contact span {
     color: rgb(62, 171, 184);
+}
+
+.panel {
+    color: white;
+    padding: 4rem 0;
+}
+
+.footer {
+    padding: 1.5rem 0;
 }
 
 #footerLinks a {
@@ -122,10 +133,6 @@ html {
 
 #footerLinks a:hover span {
     text-decoration: underline;
-}
-
-#footerLinks a, #footerLinks svg {
-    color: rgb(85, 221, 236);
 }
 
 /* scrollbar styling */

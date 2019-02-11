@@ -121,8 +121,6 @@ class App extends Component {
           portfolio.push(doc.data())
         })
 
-        //console.log(portfolio)
-
         this.setState({
           portfolio: portfolio
         })
@@ -237,7 +235,7 @@ class App extends Component {
             <p className="contact">or give me a call <span>+324 84 95 70 35</span></p>
           </Col>
         </Panel>
-        <Panel colorFlag="2">
+        <Panel colorFlag="2" className="footer">
           <Col xs={12} className="d-flex justify-content-center mb-3">
             <h5>My media links</h5>
           </Col>
