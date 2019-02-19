@@ -1,8 +1,15 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
 
 html, body {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
+}
+
+#svg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
 }
 
 .navbar {
