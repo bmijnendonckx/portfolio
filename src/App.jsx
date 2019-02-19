@@ -182,7 +182,7 @@ class App extends Component {
               <h1 style={{fontSize: "6rem", marginBottom: "1rem", marginLeft: "-1%"}}>Billy</h1>
               <h6 style={{fontSize: "2rem", fontWeight: "300"}}><span style={{color: "#34A2AE"}}>Junior</span> Front End Developer</h6>
           </div>
-          <object type="image/svg+xml" data={me} aria-label="me" id="svg"/>
+          <object className="d-none d-md-block" type="image/svg+xml" data={me} aria-label="me" id="svg"/>
         </Panel>
         <Panel colorFlag="2" title="About Me" id="about">
           <Col sm={12} lg={8}>
