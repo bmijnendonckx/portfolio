@@ -14,7 +14,6 @@ html, body {
 
 .navbar {
     transition: background-color .2s linear;
-    /*background-color: #008E9E;*/
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -49,6 +48,11 @@ html, body {
     background: none;
     border: none;
     cursor: pointer;
+    height: 100%;
+}
+
+.card:hover {
+    background-color: #343434;
 }
 
 #btn-cv {
@@ -93,10 +97,6 @@ html, body {
 
 .modal-title {
     color: rgb(62, 171, 184);
-}
-
-.card:hover {
-    background-color: #343434;
 }
 
 .carousel-indicators {
