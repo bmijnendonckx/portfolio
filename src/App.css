@@ -5,6 +5,22 @@ html, body {
     font-weight: 400;
 }
 
+hr {
+    border-color: #3EABB8;
+}
+
+h1, h2, h3 {
+    color: #3EABB8;
+}
+
+h3 {
+    padding-top: 1rem;
+}
+
+#about-content {
+    overflow: auto;
+}
+
 #svg {
     position: absolute;
     bottom: 0;
@@ -51,6 +67,8 @@ html, body {
     height: 100%;
 }
 
+.modal-content,
+#footerLinks a:hover,
 .card:hover {
     background-color: #343434;
 }
@@ -79,10 +97,6 @@ html, body {
 .btn-primary:focus,
 .btn-primary:active {
     background-color: #3EABB8 !important;
-}
-
-.modal-content {
-    background-color: #343434;
 }
 
 .modal-header,
@@ -135,7 +149,6 @@ html, body {
 
 #footerLinks a:hover {
     text-decoration: none;
-    background-color: #343434;
 }
 
 #footerLinks a:hover span {

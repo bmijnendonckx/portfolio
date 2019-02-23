@@ -9,7 +9,7 @@ import './App.css'
 //FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faFilePdf } from '@fortawesome/free-solid-svg-icons'
+import { faFilePdf, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 //svg
 import me from './me.svg'
 //components
@@ -142,14 +142,14 @@ class App extends Component {
           <Col sm={12} lg={8}>
             <AboutMe/>
           </Col>
-          <Col lg={4} className="d-none d-lg-flex align-items-center">
+          <Col lg={4} className="d-none d-lg-block">
             <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-6fbde.appspot.com/o/me.jpg?alt=media&token=85db9b5b-d8d8-4914-b546-bd767d3116bb" alt="me" style={{width: "100%"}}/>
           </Col>
         </Panel>
         <Panel colorFlag="1" title="Skills" id="skills">
           <Col lg="6">{ skills1.map( skill => <Progress key={skill.id} title={skill.title} progress={skill.progress} /> ) }</Col>
           <Col lg="6">{ skills2.map( skill => <Progress key={skill.id} title={skill.title} progress={skill.progress} /> ) }</Col>
-          <Button variant="primary" id="btn-cv"><a href="https://drive.google.com/file/d/1J_CaZqc3KGDYQR-oAwO8SE3vm75cf1pi/view?usp=sharing"><FontAwesomeIcon icon={faFilePdf}/> curriculum vitae</a></Button>
+          <Button variant="primary" id="btn-cv"><FontAwesomeIcon icon={faFilePdf}/><a href="https://drive.google.com/file/d/1J_CaZqc3KGDYQR-oAwO8SE3vm75cf1pi/view?usp=sharing">curriculum vitae</a><FontAwesomeIcon icon={faExternalLinkAlt}/></Button>
         </Panel>
         <Panel colorFlag="2" title="Portfolio" id="portfolio">
           <Modal show={this.state.isModalOpen} onHide={this.closeModal} size="lg" centered>

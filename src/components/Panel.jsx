@@ -5,8 +5,8 @@ const Panel = (props) => {
     const title = props => {
         if (props.title)
             return <React.Fragment>
-                <h1 style={ {color: "#3EABB8"} }>{props.title}</h1>
-                <hr style={ {borderColor: "#3EABB8"} }/>
+                <h1>{props.title}</h1>
+                <hr/>
             </React.Fragment>
     }
 
