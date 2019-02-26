@@ -143,7 +143,7 @@ class App extends Component {
             <AboutMe/>
           </Col>
           <Col lg={4} className="d-none d-lg-block">
-            <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-6fbde.appspot.com/o/me.jpg?alt=media&token=85db9b5b-d8d8-4914-b546-bd767d3116bb" alt="me" style={{width: "100%"}}/>
+            <img src="https://firebasestorage.googleapis.com/v0/b/portfolio-6fbde.appspot.com/o/me.jpg?alt=media&token=58ec7d87-ae90-4350-a16d-7db4f994915d" alt="me" style={{width: "100%"}}/>
           </Col>
         </Panel>
         <Panel colorFlag="1" title="Skills" id="skills">
