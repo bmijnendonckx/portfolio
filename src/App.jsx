@@ -40,7 +40,7 @@ class App extends Component {
           id: 0,
           title: "Sample Text",
           img: [
-            'https://firebasestorage.googleapis.com/v0/b/portfolio-6fbde.appspot.com/o/city-game.png?alt=media&token=5713a58e-94e0-4c48-9d0f-fc516bd7d244'
+            'https://firebasestorage.googleapis.com/v0/b/portfolio-6fbde.appspot.com/o/city-game.jpg?alt=media&token=370e32f0-0c66-42e0-b708-ff1a1c30c0d9'
           ],
           description: "Lorem ipsum",
           text: ""
