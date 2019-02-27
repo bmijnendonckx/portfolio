@@ -9,7 +9,7 @@ import './App.css'
 //FontAwesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faFilePdf, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faFilePdf, faExternalLinkAlt, faFont, faSlidersH, faCoffee, faKeyboard, faPen, faMusic, faGamepad } from '@fortawesome/free-solid-svg-icons'
 //svg
 import me from './me.svg'
 //components
