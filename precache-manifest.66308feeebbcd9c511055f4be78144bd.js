@@ -8,23 +8,23 @@ self.__precacheManifest = [
     "url": "/portfolio/static/js/runtime~main.ee2a1003.js"
   },
   {
-    "revision": "fdc43d7b0092fb860621",
-    "url": "/portfolio/static/js/main.fdc43d7b.chunk.js"
+    "revision": "1ef7fded575cd1988a76",
+    "url": "/portfolio/static/js/main.1ef7fded.chunk.js"
   },
   {
-    "revision": "d8e00fffb10985a6fb1f",
-    "url": "/portfolio/static/js/1.d8e00fff.chunk.js"
+    "revision": "e631efbf348059a84de4",
+    "url": "/portfolio/static/js/1.e631efbf.chunk.js"
   },
   {
-    "revision": "fdc43d7b0092fb860621",
-    "url": "/portfolio/static/css/main.e9a5e41d.chunk.css"
+    "revision": "1ef7fded575cd1988a76",
+    "url": "/portfolio/static/css/main.82f9e206.chunk.css"
   },
   {
-    "revision": "d8e00fffb10985a6fb1f",
+    "revision": "e631efbf348059a84de4",
     "url": "/portfolio/static/css/1.ce1af980.chunk.css"
   },
   {
-    "revision": "090f81a109d4ac6f34a5e219f43dc5bd",
+    "revision": "b68e9035323f82eccb6dd66e658c4885",
     "url": "/portfolio/index.html"
   }
 ];
