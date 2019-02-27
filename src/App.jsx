@@ -7,6 +7,7 @@ import 'normalize.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 //FontAwesome
+import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faFilePdf, faExternalLinkAlt, faFont, faSlidersH, faCoffee, faKeyboard, faPen, faMusic, faGamepad } from '@fortawesome/free-solid-svg-icons'
@@ -46,7 +47,9 @@ class App extends Component {
           text: ""
         }
       ]
-    }    
+    }
+    
+    library.add(faLinkedin, faTwitter, faGithub, faFilePdf, faExternalLinkAlt, faFont, faSlidersH, faCoffee, faKeyboard, faPen, faMusic, faGamepad)
   }
 
   componentDidMount() {
@@ -149,7 +152,7 @@ class App extends Component {
         <Panel colorFlag="1" title="Skills" id="skills">
           <Col lg="6">{ skills1.map( skill => <Progress key={skill.id} title={skill.title} progress={skill.progress} /> ) }</Col>
           <Col lg="6">{ skills2.map( skill => <Progress key={skill.id} title={skill.title} progress={skill.progress} /> ) }</Col>
-          <Button variant="primary" id="btn-cv"><FontAwesomeIcon icon={faFilePdf}/><a href="https://drive.google.com/file/d/1J_CaZqc3KGDYQR-oAwO8SE3vm75cf1pi/view?usp=sharing">curriculum vitae</a><FontAwesomeIcon icon={faExternalLinkAlt}/></Button>
+          <Button variant="primary" id="btn-cv"><FontAwesomeIcon icon="file-pdf"/><a href="https://drive.google.com/file/d/1J_CaZqc3KGDYQR-oAwO8SE3vm75cf1pi/view?usp=sharing">curriculum vitae</a><FontAwesomeIcon icon="external-link-alt"/></Button>
         </Panel>
         <Panel colorFlag="2" title="Portfolio" id="portfolio">
           <Modal show={this.state.isModalOpen} onHide={this.closeModal} size="lg" centered>
@@ -194,9 +197,9 @@ class App extends Component {
             <h5>My media links</h5>
           </Col>
           <Col xs={12} className="d-flex justify-content-center align-items-center text-center" id="footerLinks">
-              <Col><a href="https://www.linkedin.com/in/billy-mijnendonckx"><FontAwesomeIcon icon={faLinkedin}/> <span>LinkedIn</span></a></Col>
-              <Col><a href="https://github.com/bmijnendonckx"><FontAwesomeIcon icon={faGithub}/> <span>Github</span></a></Col>
-              <Col><a href="https://twitter.com/bmijnendonckx"><FontAwesomeIcon icon={faTwitter}/> <span>Twitter</span></a></Col>
+              <Col><a href="https://www.linkedin.com/in/billy-mijnendonckx"><FontAwesomeIcon icon={['fab', 'linkedin']}/> <span>LinkedIn</span></a></Col>
+              <Col><a href="https://github.com/bmijnendonckx"><FontAwesomeIcon icon={['fab', 'github']}/> <span>Github</span></a></Col>
+              <Col><a href="https://twitter.com/bmijnendonckx"><FontAwesomeIcon icon={['fab', 'twitter']}/> <span>Twitter</span></a></Col>
           </Col>
         </Panel>
       </div>

@@ -1,4 +1,8 @@
-import React from 'react';
+import React from 'react'
+/*
+import { Row, Col, Card } from 'react-bootstrap/lib'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+*/
 
 const AboutMe = () => {
     return <div id="about-content"><p>Hi there!</p>
@@ -8,6 +12,28 @@ const AboutMe = () => {
     <p>Due to personal issues that were conflicting with my studies that year, I couldn't continue GGP. Art felt (and still feels) like what I wanted to do although I am not the best at it.</p>
     <p>Through all these years I've learned most out of own practice, documentation and Youtube tutorials. <strong>I'm willing to take this to the field and learn more from experience.</strong></p>
     {/*
+        <Row style={{width: "100%"}}>
+            <Col lg={3}>
+                <div className="a1-1">
+                    <Card bg='info' style={{textAlign: "center", fontSize: ".7vw"}}>
+                        <Card.Header>
+                            <FontAwesomeIcon icon="font" /> Favorite Font?
+                        </Card.Header>
+                        <Card.Body>Montserrat</Card.Body>
+                    </Card>
+                </div>
+            </Col>
+            <Col lg={3}>
+                <div className="a1-1">
+                    <Card bg='info' className="inside-aspect-ratio" style={{textAlign: "center", fontSize: ".7vw"}}>
+                        <Card.Header>
+                            <FontAwesomeIcon icon="sliders-h" /> Favorite Theme?
+                        </Card.Header>
+                        <Card.Body>Dark, usually Monokai</Card.Body>
+                    </Card>
+                </div>
+            </Col>
+        </Row>
     <h3>Fun facts</h3>
     <hr/>
     <p>Favorite font? Montserrat</p>

@@ -9,7 +9,11 @@ class Portfolio extends Component {
     render() {
         return <Col lg={3} md={6} xs={12} className="mb-3 pt-3" >
             <Card onClick={this.onPortfolioClick}>
-                <Card.Img variant="top" src={this.props.img} />
+                <div className="a16-9">
+                    <div className="inside-aspect-ratio" style={{backgroundColor: "red"}}>
+                        <Card.Img variant="top" src={this.props.img} />
+                    </div>
+                </div>
                 <Card.Body>
                     <Card.Title>{this.props.title}</Card.Title>
                     <Card.Text>
