@@ -186,12 +186,6 @@ class App extends Component {
           </Modal>
           { this.renderPortfolio(portfolio) }
         </Panel>
-        <Panel colorFlag="1" title="Contact" id="contact">
-          <Col className="text-center mt-5 mb-3">
-            <p className="contact">feel free to mail me @ <a href="mailto:bmijnendonckx@gmail.com">bmijnendonckx@gmail.com</a></p>
-            <p className="contact">or give me a call <span>+324 84 95 70 35</span></p>
-          </Col>
-        </Panel>
         <Panel colorFlag="2" className="footer">
           <Col xs={12} className="d-flex justify-content-center mb-3">
             <h5>My media links</h5>
