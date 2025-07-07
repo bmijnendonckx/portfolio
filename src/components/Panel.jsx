@@ -1,23 +1,30 @@
-import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 
-const Panel = (props) => {
-    const title = props => {
-        if (props.title)
-            return <React.Fragment>
-                <h1>{props.title}</h1>
-                <hr/>
-            </React.Fragment>
-    }
+const Panel = ({ id, className = '', height, colorFlag, title, children }) => {
+  const titleElement = title ? (
+    <>
+      <h1>{title}</h1>
+      <hr />
+    </>
+  ) : null;
 
-    return <section id={props.id} className={props.className + " panel"} style={{height: props.height === "landing" ? "100vh" : "auto", backgroundColor: props.colorFlag === "1" ? "#343434" : "#444444"}}>
-        <Container style={{height: "100%"}}>
-            {title(props)}
-            <Row style={{height: props.height === "landing" ? "100%" : "auto"}}>
-                {props.children}
-            </Row>
-        </Container>
+  return (
+    <section
+      id={id}
+      className={`${className} panel`}
+      style={{
+        height: height === "landing" ? "100vh" : "auto",
+        backgroundColor: colorFlag === "1" ? "#343434" : "#444444",
+      }}
+    >
+      <Container style={{ height: "100%" }}>
+        {titleElement}
+        <Row style={{ height: height === "landing" ? "100%" : "auto" }}>
+          {children}
+        </Row>
+      </Container>
     </section>
-}
+  );
+};
 
 export default Panel;

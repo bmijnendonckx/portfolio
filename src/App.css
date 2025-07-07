@@ -17,6 +17,10 @@ h3 {
     padding-top: 1rem;
 }
 
+#root {
+    width: 100%;
+}
+
 .a16-9 {
     position: relative;
     padding-bottom: 56.25%;
@@ -157,6 +161,11 @@ h3 {
 .panel {
     color: white;
     padding: 4rem 0;
+}
+
+.card-title,
+.card-text {
+    color: white;
 }
 
 .footer {
